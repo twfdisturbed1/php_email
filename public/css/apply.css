@@ -1,0 +1,260 @@
+
+
+ /* .words{
+    width: 1200px;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+    margin-left: -9%;
+    font-family: sans-serif;
+}
+
+.words .box{
+    position: relative;
+    width: 353px;
+    height: 336px;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0,0,0,.2);
+    left: 59%;
+    bottom: 8%;
+}
+
+.words .box:hover{
+    box-shadow: -20px 50px 1000px rgba(0,0,0,.5);
+}
+.words .box p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+
+
+.words .box:hover p{
+    color: #fff;
+}
+.words .box:hover h2{
+    color: #fff;
+}
+.words .box h2{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+.words .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    block-size: 197%;
+}
+
+.words .box.box1:hover ~.bg,
+.words .box.box1:hover{
+    opacity: .7;
+    background: linear-gradient(#03A9F4,#E91E63);
+
+}
+
+.words .box.box2:hover ~.bg,
+.words .box.box2:hover{
+    opacity: .7;
+    background: linear-gradient(#FFC107,#19fd36);
+
+}
+
+.words .box.box3:hover ~.bg,
+.words .box.box3:hover{
+    opacity: .7;
+    background: linear-gradient(#FFC107,#E91E63);
+
+}  */
+/*
+
+.box.box2{
+    left: 80%;
+}
+
+.box.box3{
+    left: 106%;
+}
+
+.words .box:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -180;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.2);
+    pointer-events: none;
+
+}
+
+.words .box:after{
+     can i keep this? 
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    opacity: .1;
+    background: rgba(255,255,255,.2);
+    pointer-events: none;
+    filter: invert(1);
+}
+
+.words .box:hover:after{
+    filter: invert(0);
+}
+
+
+.content_1{
+    
+}
+ 
+input{
+    height: 22px;
+    box-shadow: 4px 2px 8px 0px;
+    border-block-start-color: yellow;
+    border-color:#a67eefc9;
+    background-color: lightyellow;
+    border-radius: 4%;
+    margin-block-end: 2%;
+}
+
+button[type="submit"]{
+    margin-block-start: 2%;
+    height: 35px;
+    width: 73px;
+    border-radius: 7%;
+    transition: .5s;
+    outline: none;
+    box-shadow: 2px 1px 3px;
+    font-weight: bold;
+    border-color: darkgray;
+}
+button[type="submit"]{
+    
+   
+}
+
+td{
+    font-weight: 600;
+    text-shadow: 1px 2px 10px;
+}
+.apply_info{
+    box-shadow: inset -2px -1px 7px;
+    block-size: 33%;
+    border-radius: 9%;
+}
+.apply_info:hover{
+    background: linear-gradient(rgb(62, 245, 160),rgb(145, 82, 245));
+    opacity: .9;
+} */
+
+.apply-form {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.apply-form form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-form input {
+    outline: none;
+    background: transparent;
+    border: 1px solid #173e43;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.apply-form input:focus {
+    border-color: #fae596;
+}
+
+.apply-form button {
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    background: #fae596;
+    border: 1px solid #fae596;
+    color: #173e43;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    transition: 0.2s ease-in-out;
+}
+
+.apply-form button:hover {
+    background: #173e43;
+    border: 1px solid #173e43;
+    color: #fff;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.words {
+    display: flex;
+    max-width: 1000px;
+    height: 300px;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box {
+    box-shadow: 0 10px 25px rgba(18,18,18,0.4);
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box p {
+    font-family: 'Open Sans',sans-serif;
+    color: #173e43;
+}
+
+.box h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #173e43;
+}
+
+.app-header {
+    text-align: center;
+}
+
+
+@media(max-width: 768px) {
+    .words {
+        flex-direction: column;
+    }
+}

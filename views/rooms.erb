@@ -1,0 +1,86 @@
+<style>
+.mySlides {display:none;}
+</style>
+<style>
+  .fas-left-rooms, .fas-right-rooms {
+    font-size: 2rem;
+  }
+  .rooms-button {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+  }
+  .rooms-button:active {
+    outline: none;
+  }
+  .content_1 {
+    height: inherit;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .rooms-images {
+    flex: 3;
+  }
+  .rooms-button-left {
+    text-align: right;
+  }
+  .rooms-button-right {
+    text-align: left;
+  }
+  button {
+    border: none !important;
+    outline: none !important;
+  }
+  button:active {
+    border: none !important;
+    outline: none !important;
+  }
+</style>
+
+    <div class="image"><div class="container">
+  <img src="images/beach.png" alt="Serenity Pointe" style="width:100%;">
+  <div class="centered">Rooms</div>
+</div></div>
+    
+    <div class="content_1">      
+<button class="rooms-button rooms-button-left" onclick="plusDivs(-1)"><i class="fas fa-chevron-circle-left fas-left-rooms"></i></button>
+
+<div class="rooms-images">
+<%# <img width="100%" class="mySlides" src="images/room.jpg"> %>
+<img width="100%" class="mySlides" src="images/gopro/007.png">
+<img width="100%" class="mySlides" src="images/gopro/008.png">
+<img width="100%" class="mySlides" src="images/gopro/009.png">
+<img width="100%" class="mySlides" src="images/gopro/010.png">
+<img width="100%" class="mySlides" src="images/gopro/011.png">
+<img width="100%" class="mySlides" src="images/gopro/012.png">
+<img width="100%" class="mySlides" src="images/gopro/013.png">
+<img width="100%" class="mySlides" src="images/gopro/014.png">
+</div>
+
+<button class="rooms-button rooms-button-right" onclick="plusDivs(+1)"><i class="fas fa-chevron-circle-right fas-right-rooms"></i></button>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex-1].style.display = "block"; 
+}
+</script>
+
+
+    </div>
+

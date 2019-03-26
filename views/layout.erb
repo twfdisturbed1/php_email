@@ -1,0 +1,257 @@
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<script src="js/layout.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Serenity Pointe</title>
+<script>
+      function checkNav(){
+            let admin_value = document.querySelector('#admin_value').value
+            const admin_nav = document.querySelector('.admin-nav')
+            const normal_nav = document.querySelector('.normal-nav')
+            if(admin_value == "true"){
+                  console.log("made it to true")
+                  admin_nav.style.display = "block";
+                  normal_nav.style.display = "none";
+            } else {
+                  console.log("made it to else")
+                  admin_nav.style.display = "none";
+                  normal_nav.style.display = "block";
+            }
+      }
+</script>
+</head>
+    <body>
+      <input type="hidden" id="admin_value" value="<%= admin_valid || nil%>">      
+      <nav height=60PX width=100% align="left" class="normal-nav">
+            <div class="title_nav">
+                  <div class="full-screen-nav">
+                        <a href="/"><font class="title" color="white"><b>Serenity Pointe &nbsp;&nbsp;&nbsp;&nbsp;</b></font></a>
+                        <div class="dropdown">
+                              <button class="dropbtn"><b>Navigation</b></button>
+                              <div class="dropdown-content">
+                                    <a href="index">Home</a>
+                                    <a href='/about_us'>About Us</a>
+                                    <a href='/testimonial'>Testimonial</a>
+                                    <a href='/personal_stories'>Personal Stories</a>
+                              </div>
+                        </div>
+                        <div class="dropdown">
+                              <button class="dropbtn"><b>Services</b></button>
+                              <div class="dropdown-content">
+                                    <a href='/services'>Services</a>
+                                    <a href='/events'>Events</a>                          
+                                    </div>
+                        </div>
+                        <div class="dropdown">
+                              <button class="dropbtn"><b>Other</b></button>
+                              <div class="dropdown-content">
+                                    <a href='/tour'>Facility Tour</a>
+                                    <a href='/sponsor_page'>Sponsor Page</a>
+                                    <a href='/rooms'>Rooms</a>
+                                    <a href='/staff'>Staff</a>
+                              </div>
+                        </div>
+                        <div class="dropdown">
+                              <button class="dropbtn"><b>Apply Today</b></button>
+                              <div class="dropdown-content">
+                                    <a href='/apply'>Apply</a>
+                              </div>
+                        </div>
+                        <div class="dropdown">
+                              <a class="dropbtn" href='/crisis'><b style="color: rgb(63, 176, 172);">Emergency Help</b></a>
+                        </div>
+                  </div>
+                  <div class="mobile_menu_icon">
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+                  </div>
+                  <div class="topnav">                        
+                        <a href="index" class="active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                        <div id="myLinks">
+                              <a href="index">Home</a>
+                              <a href='/about_us'>About Us</a>
+                              <a href='/testimonial'>Testimonial</a>
+                              <a href='/personal_stories'>Personal Stories</a>
+                              <a href='/services'>Services</a>
+                              <a href='/tour'>Facility Tour</a>
+                              <a href='/sponsor_page'>Sponsor Page</a>
+                              <a href='/rooms'>Rooms</a>
+                              <a href='/staff'>Staff</a>
+                              <a href='/apply'>Apply</a>
+                              <a href='/crisis'>Emergency</a>
+                        </div>
+                  </div>
+                  <div  class="topcorner">
+                        Call: <a id="top_link" href="tel:1-555-555-5555">1-(555)-555-5555</a>
+                  </div>
+            </div>
+      </nav>
+      
+
+
+
+
+
+
+      
+    
+            <%# <nav height=60PX width=100% align="left" class="admin-nav">
+            <div class="title_nav"><font class="title" color="white"><b>Serenity Admin &nbsp;&nbsp;&nbsp;&nbsp;</b></font>
+            <div class="dropdown">
+            <button class="dropbtn"><b>Navigation</b></button>
+            <div class="dropdown-content">
+                  <a href="index">Home</a>
+                  <a href='/about_us'>About Us</a>
+                  <a href='/testimonial'>Testimonial</a>
+                  <a href='/personal_stories'>Personal Stories</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <button class="dropbtn"><b>Services</b></button>
+            <div class="dropdown-content">
+                  <a href='/services'>Services</a>
+                  <a href='/events'>Events</a>                          
+
+            </div>
+            </div>
+            <div class="dropdown">
+            <button class="dropbtn"><b>Other</b></button>
+            <div class="dropdown-content">
+                  <a href='/tour'>Facility Tour</a>
+                  <a href='/sponsor_page'>Sponsor Page</a>
+                  <a href='/rooms'>Rooms</a>
+                  <a href='/videos'>Video Section</a>
+                  <a href='/staff'>Staff</a>
+            </div>
+            </div>
+            <div class="dropdown">
+            <button class="dropbtn"><b>Apply Today</b></button>
+            <div class="dropdown-content">
+                  <a href='/apply'>Apply</a>
+            </div>
+            </div>
+            </div>
+            <div class="mobile_menu_icon">  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <img src="images/thumb_nails/menu.png"> </a>
+            </div>
+            <div class="topnav">
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
+      <a href="index" class="active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+            <a href="index">Home</a>
+            <a href='/about_us'>About Us</a>
+            <a href='/testimonial'>Testimonial</a>
+            <a href='/personal_stories'>Personal Stories</a>
+            <a href='/services'>Services</a>
+            <a href='/tour'>Facility Tour</a>
+            <a href='/sponsor_page'>Sponsor Page</a>
+            <a href='/rooms'>Rooms</a>
+            <a href='/videos'>Video Section</a>
+            <a href='/staff'>Staff</a>
+            <a href='/apply'>Apply</a>
+      </div>
+      </div>
+            
+      </nav> %>
+
+
+
+
+
+
+    
+<article>
+<div class="grid">
+<%=yield%>
+<div class="footer">
+      <div align="center" class="child_footer">
+      <img src="images/logo.png">
+      <br>
+      <h1>SERENITY POINTE</H1>
+      <br>
+      <a target=_blank href="http://www.twitter.com"><img alt="Twitter" src="images/twitter.png"></a>
+      <a target=_blank href="http://www.youtube.com"><img alt="You Tube" src="images/you_tube.png"></a>
+      <a targe=_blank href="http://www.instagram.com"><img alt="Instagram" src="images/instagram.png"></a>
+      <a target=_blank href="http://www.facebook.com"><img alt="Face Book" src="images/facebook.png"></a>
+      <br>
+            <font size="5rem">
+            <br>
+            201 W 2nd Ave, Williamson, WV 25661
+            <br>
+            </font>
+      
+      </div>
+
+      <div align="center" class="child_footer">
+            <div class="nmobile_table">
+            <table>
+            <tr>
+            <th valign="top" align="left">
+            <font size="4rem">
+            <center><b><font color="#3fb0ac ">Links</font></b></center>
+                  <ul>
+                  <li><a href="index">Home</a></li>
+                  <li><a href='/about_us'>About Us</a></li>
+                  <li><a href='/testimonial'>Testimonial</a></li>
+                  <li><a href='/personal_stories'>Personal Stories</a></li>
+                  </ul>  
+                  </font>
+            </th>
+            <th valign="top" align="left">
+            <font size="4rem">
+                  <center><b><font color="#3fb0ac">Services</font></b></center>
+                  <ul>
+                  <li><a href='/services'>Services</a></li>
+                  <li><a href='/events'>Events</a></li>               
+                  </ul>
+                  </font>
+            </th>
+      </tr>
+      <tr>
+            <td valign="top" align="left">
+            <font size="4rem">
+                  <center><b><font color="#3fb0ac ">Other</font></b></center>
+                  <ul>
+                  <li><a href='/tour'>Facility Tour</a></li>
+                  <li><a href='/sponsor_page'>Sponsor Page</a></li>
+                  <li><a href='/rooms'>Rooms</a></li>
+                  <li><a href='/videos'>Video Section</a></li>
+                  <li><a href='/staff'>Staff</a></li>
+                  </ul>
+                  </font>
+            </td>
+            <td valign="top" align="left">
+            <font size="4rem">
+                  <center><b><font color="#3fb0ac">Apply Today</font></b></center>
+                  <ul>
+                  <li><a href='/apply'>Apply</a></li>
+                  </ul>
+                  </font>
+            </td>
+            </tr>
+            </table>
+            </div>
+ 
+      </div>
+      <div width="100%" align="center" class="copyright">
+      Copyright © 2019 Serenity Pointe. All Rights Reserved. | Confidential and Private Call: <a href="tel:1-555-555-5555">555-555-5555</a> | <a href="privacy">Privacy Policy</a>
+      <br>
+</div>
+      </div>       
+      
+
+</div>
+
+</article>
+</body>

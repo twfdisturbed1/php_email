@@ -1,0 +1,28 @@
+.video-container {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.vid {
+    flex: 1;
+    margin: auto;
+    transition: 0.2s ease-in-out;
+}
+
+.vid:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.vid-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.video-section {
+    margin: 10px;
+}

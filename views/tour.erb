@@ -1,0 +1,95 @@
+<style>
+.mySlides {display:none;}
+</style>
+<style>
+  .fas-left-tour, .fas-right-tour {
+    font-size: 2rem;
+  }
+  .facility-tour-button {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+  }
+  .facility-tour-button:active {
+    outline: none;
+  }
+  .content_1 {
+    height: inherit;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .tour-images {
+    flex: 3;
+  }
+  .facility-tour-button-left {
+    text-align: right;
+  }
+  .facility-tour-button-right {
+    text-align: left;
+  }
+  button {
+    border: none !important;
+    outline: none !important;
+  }
+  button:active {
+    border: none !important;
+    outline: none !important;
+  }
+</style>
+
+    <div class="image"><div class="container">
+  <img src="images/beach.png" alt="Serenity Pointe" style="width:100%;">
+  <div class="centered">Facility Tour</div>
+</div></div>
+    
+    <div class="content_1">      
+
+<button class="facility-tour-button facility-tour-button-left" onclick="plusDivs(-1)"><i class="fas fa-chevron-circle-left fas-left-tour"></i></button>
+
+<div class="tour-images">
+<img width="100%" class="mySlides" src="images/gopro/001.png">
+<img width="100%" class="mySlides" src="images/gopro/002.png">
+<img width="100%" class="mySlides" src="images/gopro/003.png">
+<img width="100%" class="mySlides" src="images/gopro/004.png">
+<img width="100%" class="mySlides" src="images/gopro/005.png">
+<img width="100%" class="mySlides" src="images/gopro/006.png">
+<img width="100%" class="mySlides" src="images/gopro/007.png">
+<img width="100%" class="mySlides" src="images/gopro/008.png">
+<img width="100%" class="mySlides" src="images/gopro/009.png">
+<img width="100%" class="mySlides" src="images/gopro/010.png">
+<img width="100%" class="mySlides" src="images/gopro/011.png">
+<img width="100%" class="mySlides" src="images/gopro/012.png">
+<img width="100%" class="mySlides" src="images/gopro/013.png">
+<img width="100%" class="mySlides" src="images/gopro/014.png">
+<img width="100%" class="mySlides" src="images/gopro/015.png">
+<img width="100%" class="mySlides" src="images/gopro/016.png">
+<img width="100%" class="mySlides" src="images/gopro/017.png">
+<img width="100%" class="mySlides" src="images/gopro/018.png">
+</div>
+
+<button class="facility-tour-button facility-tour-button-right" onclick="plusDivs(+1)"><i class="fas fa-chevron-circle-right fas-right-tour"></i></button>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  x[slideIndex-1].style.display = "block"; 
+}
+</script>
+
+    </div>
+    
